@@ -29,7 +29,7 @@ postgres=# \q
 
 - [How to install PostgreSQL in Ubuntu 16.o4](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-ubuntu-16-04)
 
-  ### Step 2: Connecting PostgreSQL to HeidiSQL
+### Step 2: Connecting PostgreSQL to HeidiSQL
 
 After I installed postgreSQL I wanted to connect it to HeidiSQL so I could easily visualise/manage the MySQL that will be created.
 
