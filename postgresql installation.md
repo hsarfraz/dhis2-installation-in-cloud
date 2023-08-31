@@ -4,6 +4,7 @@ Here are the steps I took to install postgreSQL on my linux instance that is run
 
 The first step that I took was to check the Ubuntu version that was on my machine. After running the command below I knew that I had Ubuntu 16.04 installed. 
 ```console
+# checking ubuntu version
 lsb_release -a
 ```
 I then searched up a tutorial on how to install postgreSQL on Ubuntu 16.04
