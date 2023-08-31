@@ -29,3 +29,13 @@ postgres=# \q
 
 - [How to install PostgreSQL in Ubuntu 16.o4](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-ubuntu-16-04)
 
+  ### Step 2: Connecting PostgreSQL to HeidiSQL
+
+After I installed postgreSQL I wanted to connect it to HeidiSQL so I could easily visualise/manage the MySQL that will be created.
+
+
+
+**Personal Note**: The steps that I have listed here are hack-prone, meaning that anyone cas easily hack the postgreSQL database. I need to get back to this step and make sure the remote access is secure
+
+***Step 2 Links***
+
