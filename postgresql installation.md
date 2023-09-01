@@ -52,4 +52,5 @@ psql -V
 
 ***Step 2 Links***
 - [Enabling remote access for PostgreSQL](https://stackoverflow.com/questions/31091748/postgres-server-not-listening)
+- [How to check for postgreSQL version](https://chartio.com/resources/tutorials/how-to-view-which-postgres-version-is-running/)
 
