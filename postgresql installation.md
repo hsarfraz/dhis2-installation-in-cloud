@@ -5,19 +5,19 @@ Here are the steps I took to install postgreSQL on my linux instance that is run
 The first step that I took was to check the Ubuntu version that was on my machine. After running the command below I knew that I had Ubuntu 16.04 installed. 
 ```console
 # checking ubuntu version
-lsb_release -a
+root@example:~# lsb_release -a
 ```
 I then searched up a tutorial on how to install postgreSQL on Ubuntu 16.04
 ```console
-sudo apt-get update
-sudo apt-get install postgresql postgresql-contrib
+root@example:~# sudo apt-get update
+root@example:~# sudo apt-get install postgresql postgresql-contrib
 
 # Accessing postgreSQL by switching over to the postgres account
-sudo -i -u postgres
-psql
+root@example:~# sudo -i -u postgres
+postgres@example:~$ psql
 
 # Accessing postgreSQL without switching accounts
-sudo -u postgres psql
+root@example:~# sudo -u postgres psql
 
 # Exiting postgresSQL 
 postgres=# \q
@@ -40,11 +40,11 @@ After I installed postgreSQL I wanted to connect it to HeidiSQL so I could easil
 # make sure to put the * (ex. listen_addresses='*' 
 
 # to access the files (note: enter postgreSQL version in directory):
-sudo nano /etc/postgresql/9.5/main/pg_hba.conf
-sudo nano /etc/postgresql/9.5/main/postgresql.conf
+root@example:~# sudo nano /etc/postgresql/9.5/main/pg_hba.conf
+root@example:~# sudo nano /etc/postgresql/9.5/main/postgresql.conf
 
 # how to check your postgreSQL version
-psql -V
+root@example:~# psql -V
 ```
 
 
