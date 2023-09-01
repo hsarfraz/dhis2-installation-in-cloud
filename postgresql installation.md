@@ -31,11 +31,25 @@ postgres=# \q
 
 ### Step 2: Connecting PostgreSQL to HeidiSQL
 
-After I installed postgreSQL I wanted to connect it to HeidiSQL so I could easily visualise/manage the MySQL that will be created.
+After I installed postgreSQL I wanted to connect it to HeidiSQL so I could easily visualise/manage the MySQL that will be created. To do this I had to access these two files and make these changes:
+```console
+# for the 'pg_hba.conf' file
+# replace ip address with 0's (ex. host all all 0.0.0.0/0 md5 
 
+# for the 'postgresql.conf' file
+# make sure to put the * (ex. listen_addresses='*' 
+
+# to access the files (note: enter postgreSQL version in directory):
+sudo nano /etc/postgresql/9.5/main/pg_hba.conf
+sudo nano /etc/postgresql/9.5/main/postgresql.conf
+
+# how to check your postgreSQL version
+psql -V
+```
 
 
 **Personal Note**: The steps that I have listed here are hack-prone, meaning that anyone cas easily hack the postgreSQL database. I need to get back to this step and make sure the remote access is secure
 
 ***Step 2 Links***
+- [Enabling remote access for PostgreSQL](https://stackoverflow.com/questions/31091748/postgres-server-not-listening)
 
