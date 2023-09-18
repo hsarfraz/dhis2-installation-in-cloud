@@ -73,7 +73,7 @@ user@example:~$ sudo "${EDITOR:-vi}" index.html
 
 # accessing the html file through nano
 # to exit press CTRL^X
-sudo "${EDITOR:-nano}" index.nginx-debian.html
+user@example:~$ sudo "${EDITOR:-nano}" index.nginx-debian.html
 ```
 
 ***Step 2 Links***
