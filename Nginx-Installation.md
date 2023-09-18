@@ -65,10 +65,10 @@ user@example:~$ sudo ufw allow 81/tcp
 One thing that I would like to point out on the website tutorial is that on step 3 you can access your HTML page in two ways (one is through vi and the other is through nano). Accessing the files both ways is fine but there are differe ways to exit the file (there are more steps to exit vi). I have inculded the details below.
 
 ```console
-# accessing the html file through vi
-# to exit press shift-esc 
-# then press shift^:
-# then type 'exit' and press enter
+#accessing the html file through vi
+#to exit press shift-esc 
+#then press shift^:
+#then type 'exit' and press enter
 user@example:~$ sudo "${EDITOR:-vi}" index.html
 
 # accessing the html file through nano
