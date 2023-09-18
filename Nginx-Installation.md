@@ -38,7 +38,7 @@ user@example:~$ sudo ufw default deny incoming
 user@example:~$ sudo ufw default allow outgoing
 ```
 
-**Personal Note**: I am currently trying to figure out what the password is for the postgresql account that is automatically created when installing postgreSQL
+**Personal Note**: I am not sure if the firwall rules need to be re-defined. I need to double check this later
 
 ***Step 1 Links***
 
@@ -47,4 +47,36 @@ user@example:~$ sudo ufw default allow outgoing
 
 ### Step 2: Creating HTML Pages
 
-*in progress
+To check if I could create/edit a HTML page I had to check my linux ip address. After I obtained my ip affdress I typed on a web browser ***"http://{insert ip address here}"***
+
+There are many commands that can be used to obtain the address but I used this one:
+
+```console
+# ip address is next to 'inet addr: '
+user@example:~$ ifconfig
+```
+
+To create a html page I followed the steps on [this tutrorial](https://ubuntu.com/tutorials/install-and-configure-nginx#3-creating-our-own-website). One thing that I would like to point out is that this tutorial used port 81 which you would have to enable. If you do not enable port 81 then you can not access your webpage.
+
+```console
+# Opening port 81 in Ubuntu 16.04
+user@example:~$ sudo ufw allow 81/tcp
+```
+One thing that I would like to point out on the website tutorial is that on step 3 you can access your HTML page in two ways (one is through vi and the other is through nano). Accessing the files both ways is fine but there are differe ways to exit the file (there are more steps to exit vi). I have inculded the details below.
+
+```console
+# accessing the html file through vi
+# to exit press shift-esc 
+# then press shift^:
+# then type 'exit' and press enter
+user@example:~$ sudo "${EDITOR:-vi}" index.html
+
+# accessing the html file through nano
+# to exit press CTRL^X
+sudo "${EDITOR:-nano}" index.nginx-debian.html
+```
+
+***Step 2 Links***
+
+- [How to create your own website on ubuntu 16.04 -this link is also referenced in the text above](https://ubuntu.com/tutorials/install-and-configure-nginx#3-creating-our-own-website)
+- [How to open a port in Ubuntu 16.04](https://www.youtube.com/watch?v=WQmLKD06fQI)
